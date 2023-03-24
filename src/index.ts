@@ -12,7 +12,11 @@ dotenv.config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(cors());
+// allow cors from all origins
+app.use(cors({
+    origin: '*',
+    credentials: true,
+}));
 
 app.use(morgan('tiny'));
 

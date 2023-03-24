@@ -2,7 +2,6 @@ import { ThirdwebAuth } from "@thirdweb-dev/auth/express";
 import { PrivateKeyWallet } from "@thirdweb-dev/auth/evm";
 import { THIRDWEB_AUTH_DOMAIN, THIRDWEB_AUTH_PRIVATE_KEY } from "../constants/constants";
 
-console.log(THIRDWEB_AUTH_DOMAIN, THIRDWEB_AUTH_PRIVATE_KEY);
 const users: Record<string, any> = {};
 const ThirdwebAuthentication = ThirdwebAuth({
     domain: THIRDWEB_AUTH_DOMAIN,
