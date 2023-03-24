@@ -2,7 +2,7 @@ import express, { Response, Request, Express } from "express";
 import dotenv from "dotenv";
 import cors from 'cors';
 import morgan from 'morgan';
-import { PORT } from "./constants/constants";
+import { PORT, THIRDWEB_AUTH_DOMAIN } from "./constants/constants";
 import routes from "./routes";
 import ThirdwebAuthentication from "./utils/thirdwebAuth";
 
@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // allow cors from all origins
 app.use(cors({
-    origin: '*',
+    origin: THIRDWEB_AUTH_DOMAIN,
     credentials: true,
 }));
 
